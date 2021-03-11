@@ -17,7 +17,7 @@ const area = function(L1, L2) {
     return L1 * L2
 }
 let result = area(sidea, sideb)
-console.log(`Area of rectangle with sides ${sidea} and ${sideb} is`, result)
+console.log(`Ex 1 Area of rectangle with sides ${sidea} and ${sideb} is`, result)
 
 /* EXERCISE 2
 Write a function "crazySum" which receives two integers. It should return the sum of those two values, 
@@ -31,7 +31,7 @@ const crazySum = function(i1 = 1, i2 = 1) {
     }
     return sum
 }
-console.log('Result of CrazySum is', crazySum(3, 4))
+console.log('Ex 2 Result of CrazySum is', crazySum(3, 4))
 
 /* EXERCISE 3
 Write a function "crazyDiff" that computes the absolute difference between a given number and 19. 
@@ -49,7 +49,7 @@ const crazyDiff = function(anumber) {
 
 }
 
-console.log('Result from CrazyDiff', crazyDiff(21))
+console.log('Ex 3 Result from CrazyDiff', crazyDiff(21))
 
 /* EXERCISE 4
 Write a function "boundary" which accept an integer n and returns true 
@@ -63,7 +63,7 @@ const boundary = function(no) {
     }
     return result
 }
-console.log('Result of boundary with 20', boundary(20))
+console.log('Ex 4 Result of boundary with 20', boundary(20))
 console.log('Result of boundary with 21', boundary(21))
 console.log('Result of boundary with 100', boundary(100))
 console.log('Result of boundary with 101', boundary(101))
@@ -78,14 +78,14 @@ then it should just return the original string.
 */
 
 const strivify = function(myString) {
-    if (myString === "Strive") {
+    if (myString === "Strive") { //Begins with should I check whether the String starts with Strive?
         return myString
     } else {
         return `Strive ${myString}`
     }
 }
 
-console.log("Result of strivify", strivify("is sickin' cool"))
+console.log(" Ex 5 Result of strivify", strivify("is sickin' cool"))
 console.log("Result of strivify", strivify("Strive"))
     /* EXERCISE 6
     Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
@@ -96,15 +96,13 @@ console.log("Result of strivify", strivify("Strive"))
 const check3and7 = function(number) {
     let message = ""
     if (number % 3 === 0 || number % 7 === 0) {
-        console.log(number % 3)
-        console.log(number % 7)
         message = "Input multiple of 3 or 7"
     } else {
         message = "Input not a multiple of 3 or 7"
     }
     return message
 }
-console.log('Result of check3and7:', check3and7(9))
+console.log('Ex 6 Result of check3and7:', check3and7(9))
 console.log('Result of check3and7:', check3and7(49))
 console.log('Result of check3and7:', check3and7(5)) //Know your results
 
@@ -121,7 +119,7 @@ const reverseString = function(word = "Strive") {
     return `Reversed string of ${word} is ${reversedString}`
 
 }
-console.log(reverseString('Hallo guys'))
+console.log("Ex 7 Result of reverseString", reverseString('Hallo guys'))
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
@@ -135,7 +133,7 @@ const upperFirst = function(phrase) {
     return wordbox.join(" ")
 }
 
-console.log("Result of upperFirst:", upperFirst("cat dog milk buddha"))
+console.log("Ex 8 Result of upperFirst:", upperFirst("cat dog milk buddha"))
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string 
@@ -146,7 +144,7 @@ const cutString = function(word) {
     newString = word.slice(1, word.indexOf(word.slice(-1)))
     return newString
 }
-console.log("Result cutString :", cutString("Strive"))
+console.log("Ex 9 Result cutString :", cutString("Strive"))
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array 
@@ -170,7 +168,7 @@ const giveMeRandom = function(count) {
 
 }
 
-console.log("Result of giveMeRandomArray", giveMeRandom(10))
+console.log("Ex 10 Result of giveMeRandomArray", giveMeRandom(10))
 console.log("Result of giveMeRandomArray", giveMeRandom(5))
 console.log("Result of giveMeRandomArray", giveMeRandom(0))
 

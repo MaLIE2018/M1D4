@@ -58,7 +58,7 @@ if n is within 20 and 100 (included) or if it's equal to 400.
 
 const boundary = function(no) {
     let result = false
-    if ((no === 400) || (20 < no && no <= 100)) { // 20 < no <= 100 Doesn't work, why?
+    if ((no === 400) || (20 < no && no <= 100)) { //;Expression is true and can directly be returned. Smart
         result = true
     }
     return result
@@ -78,7 +78,8 @@ then it should just return the original string.
 */
 
 const strivify = function(myString) {
-    if (myString === "Strive") { //Begins with should I check whether the String starts with Strive?
+    //if condition return result one line 
+    if (myString.startsWith("Strive")) { //"Begins with" should I check whether he String starts with Strive?
         return myString
     } else {
         return `Strive ${myString}`
@@ -88,10 +89,12 @@ const strivify = function(myString) {
 console.log(" Ex 5 Result of strivify", strivify("is sickin' cool"))
 console.log("Result of strivify", strivify("Strive"))
     /* EXERCISE 6
-    Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
+    Write a function "check3and7" which accepts a positive number and 
+    check if it is a multiple of 3 or a multiple of 7.
     HINT: Module Operator
     */
 
+//const check3or7 = (number) => (number % 3 === 0 || number % 7 === 0)
 
 const check3and7 = function(number) {
     let message = ""
@@ -109,26 +112,25 @@ console.log('Result of check3and7:', check3and7(5)) //Know your results
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
-
+// split string into array reverse array join back together
 const reverseString = function(word = "Strive") {
     let reversedString = ""
     for (i = word.length - 1; 0 <= i; i--) {
         reversedString = reversedString + word.substr(i, 1)
     }
-
     return `Reversed string of ${word} is ${reversedString}`
-
 }
 console.log("Ex 7 Result of reverseString", reverseString('Hallo guys'))
 
 /* EXERCISE 8
-Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
+Write a function "upperFirst" to capitalize the first letter of each word of a 
+given string passed as a parameter.
 */
 
 const upperFirst = function(phrase) {
     wordbox = phrase.split(" ")
     for (word of wordbox) {
-        wordbox[wordbox.indexOf(word)] = word.slice(0, 1).toUpperCase() + word.slice(1, word.length)
+        wordbox[wordbox.indexOf(word)] = word.slice(0, 1).toUpperCase() + word.slice(1) //slice(1) character 1 to End of character
     } //String index starts from 0 as well!!!!
     return wordbox.join(" ")
 }
@@ -156,10 +158,8 @@ const getRandomInt = function(min, max) {
 
 const giveMeRandom = function(count) {
     if (count < 1) {
-        count = 1 // How to catch this ?
-        console.log("Count must be greate 0!")
+        return "Count must be greater 0!"
     }
-
     randomNumbers = Array(count)
     for (let i = 0; i < randomNumbers.length; i++) {
         randomNumbers[i] = getRandomInt(0, 11)

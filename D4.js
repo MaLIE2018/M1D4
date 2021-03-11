@@ -1,5 +1,5 @@
 /*
-ASSIGNMENT RULES
+  ASSIGNMENT RULES
 - All the answers must be written in JavaScript
 - You can ask for help, reach the Teaching Assistants if needed
 - The solution must be available for the tutors by the end of the day (5PM CET)
